@@ -17,8 +17,8 @@ RUN apt-get install -y wget && cd /opt && \
     update-alternatives --set javac /opt/jdk1.${VERSION}.0_${UPDATE}/bin/javac && \
     rm -rf /opt/server-jre-${VERSION}u${UPDATE}-linux-x64.tar.gz
 
-ENV JAVA_HOME /usr/lib/jvm/java-${VERSION}-oracle
+ENV JAVA_HOME /opt/jdk1.${VERSION}.0_${UPDATE}
 ENV JRE_HOME ${JAVA_HOME}/jre
 ENV PATH $PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 
-ENTRYPOINT ["/tini", "--", "java"]
+ENTRYPOINT ["/tini", "-s", "--", "java"]
