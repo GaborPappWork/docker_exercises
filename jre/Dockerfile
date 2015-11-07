@@ -21,4 +21,6 @@ ENV JAVA_HOME /opt/jdk1.${VERSION}.0_${UPDATE}
 ENV JRE_HOME ${JAVA_HOME}/jre
 ENV PATH $PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 
-ENTRYPOINT ["/tini", "-s", "--", "java"]
+ENTRYPOINT ["/tini", "-s", "--", "java"  ]
+
+CMD [ "-version" ]
