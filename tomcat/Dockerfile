@@ -17,8 +17,6 @@ EXPOSE 8080
 
 USER tomcat
 
-#ENTRYPOINT [ "/tini", "-s", "--", "$CATALINA_HOME/bin/catalina.sh" ]
+ENTRYPOINT [ "/tini", "-s", "--", "/opt/tomcat/bin/catalina.sh" ]
 
-ENTRYPOINT [ "/bin/bash" ]
-
-#CMD [ "start" ]
+CMD [ "run" ]
