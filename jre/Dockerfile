@@ -1,8 +1,8 @@
 FROM tini_base
 
 ENV VERSION 8
-ENV UPDATE 66
-ENV BUILD 17
+ENV UPDATE 74
+ENV BUILD 02
 
 RUN apt-get install -y wget && cd /opt && \
     wget --no-cookies --no-check-certificate \
